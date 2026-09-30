@@ -1,0 +1,11 @@
+{
+  "identityAuthority": "IAM",
+  "authorizationAuthority": "AccessCore",
+  "domainAuthority": "owning domain service",
+  "roles": {
+    "IAM": "establish subject identity",
+    "AccessCore": "decide whether the subject may perform the action on the resource",
+    "domain": "define action semantics, resource semantics and execute behavior",
+    "projector": "present an allowed surface"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "input": {
+    "required": [
+      "subject",
+      "action",
+      "resource"
+    ],
+    "optional": [
+      "context"
+    ]
+  },
+  "output": {
+    "decision": [
+      "allow",
+      "deny"
+    ]
+  },
+  "canonicalFunction": "(subject, action, resource, context) -> allow | deny",
+  "rules": [
+    "AccessCore returns an authorization decision only",
+    "AccessCore does not execute the action",
+    "AccessCore does not fetch or transform the protected resource",
+    "a service must enforce authorization at the actual action boundary"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "package": "accesscore-contracts",
+  "version": "0.1.0",
+  "files": [
+    "00-engine-contract.json",
+    "01-decision-contract.json",
+    "02-authority-boundary.json",
+    "manifest.json"
+  ],
+  "status": "active"
+}

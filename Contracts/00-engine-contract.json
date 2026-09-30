@@ -1,0 +1,19 @@
+{
+  "name": "AccessCore",
+  "version": "0.1.0",
+  "kind": "authorization decision engine",
+  "principles": [
+    "authorization is a decision, not presentation behavior",
+    "identity is supplied by an external identity authority",
+    "action and resource semantics belong to the owning domain",
+    "the decision surface is domain-neutral"
+  ],
+  "mustNot": [
+    "authenticate users",
+    "own login sessions",
+    "own IAM identity data",
+    "own domain business logic",
+    "render projectors or UI",
+    "treat hidden UI as authorization"
+  ]
+}

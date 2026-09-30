@@ -1,0 +1,11 @@
+{
+  "name": "@th3hypn0tist/accesscore",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./accesscore.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

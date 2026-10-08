@@ -1,11 +1,25 @@
 {
   "identityAuthority": "IAM",
   "authorizationAuthority": "AccessCore",
+  "structuralResolutionAuthority": "DWH",
+  "browserExecutionRuntime": "WebEngine",
+  "uiPrimitiveLayer": "WebGUI",
+  "spatialPrimitiveLayer": "S3D",
   "domainAuthority": "owning domain service",
   "roles": {
-    "IAM": "establish subject identity",
+    "IAM": "establish subject identity and authentication context",
     "AccessCore": "decide whether the subject may perform the action on the resource",
-    "domain": "define action semantics, resource semantics and execute behavior",
-    "projector": "present an allowed surface"
-  }
+    "DWH": "resolve canonical structural/resource declarations and relations",
+    "WebEngine": "execute declared web structure in the browser",
+    "WebGUI": "provide generic DOM/UI primitives",
+    "S3D": "provide generic spatial/3D primitives",
+    "domain": "define action/resource business semantics and execute protected behavior"
+  },
+  "invariants": [
+    "identity is not authorization",
+    "resolution is not authorization",
+    "presentation is not authorization",
+    "runtime execution is not authorization",
+    "the protected service enforces the AccessCore decision at the actual action/resource boundary"
+  ]
 }

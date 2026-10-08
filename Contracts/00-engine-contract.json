@@ -1,10 +1,21 @@
 {
   "name": "AccessCore",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "kind": "authorization decision engine",
+  "responsibility": "authority / may",
+  "systemSplit": {
+    "IAM": "who",
+    "AccessCore": "authority / may",
+    "DWH": "where / what relates to what",
+    "WebEngine": "execute declared web structure",
+    "WebGUI": "generic UI primitives",
+    "S3D": "spatial / 3D primitives"
+  },
   "principles": [
     "authorization is a decision, not presentation behavior",
-    "identity is supplied by an external identity authority",
+    "identity is supplied by IAM or another explicit identity authority",
+    "DWH resolvability does not imply authorization",
+    "WebEngine runtime visibility does not imply authorization",
     "action and resource semantics belong to the owning domain",
     "the decision surface is domain-neutral"
   ],
@@ -12,8 +23,11 @@
     "authenticate users",
     "own login sessions",
     "own IAM identity data",
+    "own DWH structural/resource resolution",
     "own domain business logic",
     "render projectors or UI",
-    "treat hidden UI as authorization"
+    "own WebGUI or S3D primitives",
+    "treat hidden UI as authorization",
+    "treat DWH reachability or resolvability as authority"
   ]
 }
